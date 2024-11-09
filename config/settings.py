@@ -13,7 +13,11 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 
 AUTH_USER_MODEL = 'accounts.User'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '3.34.186.143',
+    'localhost',
+    '127.0.0.1'
+]
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (

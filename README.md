@@ -6,7 +6,7 @@ assignment/
 ├── config/                  # 프로젝트 설정
 ├── accounts/               # 계정 관리 앱
 ├── utils/                  # 유틸리티 앱
-├── .env                   # 환경 변수
+├── .env                   # 환경 변수(설치방법 4번 항목 참조)
 ├── .gitignore            # git 제외 파일
 ├── requirements.txt      # 의존성 패키지
 └── manage.py            # Django 관리 스크립트
@@ -47,7 +47,7 @@ pip install -r requirements.txt
 ### 4. 환경 변수 설정
 ```bash
 DJANGO_ENV=development
-SECRET_KEY=your-secret-key-here
+SECRET_KEY=your-secret-key
 ```
 
 ### 5. 데이터베이스 마이그레이션
