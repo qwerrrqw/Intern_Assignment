@@ -1,35 +1,81 @@
 # Intern_Assignment
 
-
-
+## 프로젝트 구조
+```bash
 assignment/
-│
 ├── config/                  # 프로젝트 설정
-│   ├── __init__.py
-│   ├── settings.py         # 프로젝트 설정 파일
-│   ├── urls.py            # 메인 URL 설정
-│   ├── wsgi.py
-│   └── asgi.py
-│
 ├── accounts/               # 계정 관리 앱
-│   ├── __init__.py
-│   ├── models.py          # User 모델
-│   ├── views.py           # 회원가입/로그인 뷰
-│   ├── urls.py           # 계정 관련 URL
-│   └── serializers.py     # 시리얼라이저
-│
 ├── utils/                  # 유틸리티 앱
-│   ├── __init__.py
-│   ├── permissions.py     # 권한 관련 유틸
-│   └── tests/             # 테스트 코드
-│       ├── __init__.py
-│       ├── conftest.py    # pytest 설정
-│       ├── test_auth.py   # 인증 테스트
-│       └── test_roles.py  # 역할 테스트
-│
-├── .env                   # 환경 변수 (git에서 제외)
-├── .env.example          # 환경 변수 예시
-├── .gitignore           # git 제외 파일 목록
-├── requirements.txt     # 패키지 의존성
-├── manage.py           # Django 관리 스크립트
-└── pytest.ini         # pytest 설정 파일
+├── .env                   # 환경 변수
+├── .gitignore            # git 제외 파일
+├── requirements.txt      # 의존성 패키지
+└── manage.py            # Django 관리 스크립트
+```
+
+## 기술 스택
+- Python 3.11
+- Django 5.1
+- Django REST Framework
+- Simple JWT
+- drf-yasg (Swagger/OpenAPI)
+
+## 주요 기능
+- JWT 기반 사용자 인증 시스템
+- 회원가입/로그인 API
+- 사용자 역할(Role) 관리
+- Swagger UI API 문서화
+
+## 설치 방법
+
+### 1. 레포지토리 클론
+```bash
+git clone https://github.com/qwerrrqw/Intern_Assignment.git
+cd assignment
+```
+
+### 2. 가상환경 생성 및 활성화
+```bash
+python -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
+```
+
+### 3. 패키지 설치
+```bash
+pip install -r requirements.txt
+```
+
+### 4. 환경 변수 설정
+```bash
+DJANGO_ENV=development
+SECRET_KEY=your-secret-key-here
+```
+
+### 5. 데이터베이스 마이그레이션
+```bash
+python manage.py migrate
+```
+
+### 6. 개발 서버에서 실행
+```bash
+python manage.py runserver
+```
+
+### 7. 배포 서버 링크(진행중)
+
+## API 엔드포인트
+- 회원가입: `POST /api/accounts/signup/`
+- 로그인: `POST /api/accounts/login/`
+- API 문서: `/swagger/`
+
+## API 문서
+- Swagger UI: `http://localhost:8000/swagger/`
+- ReDoc: `http://localhost:8000/redoc/`
+
+## 테스트
+```bash
+pytest
+```
+
+## 라이선스
+BSD License
+```
