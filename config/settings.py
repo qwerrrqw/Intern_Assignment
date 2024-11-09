@@ -5,6 +5,7 @@ from dotenv import load_dotenv
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+load_dotenv() 
 DEBUG = False
 if os.environ.get('DJANGO_ENV') == 'development':
     DEBUG = True
@@ -13,7 +14,11 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 
 AUTH_USER_MODEL = 'accounts.User'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '3.34.186.143',
+    'localhost',
+    '127.0.0.1'
+]
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
@@ -112,6 +117,7 @@ USE_TZ = True
 
 
 STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / 'static'
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
