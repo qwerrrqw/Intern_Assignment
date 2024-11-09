@@ -60,16 +60,13 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-### 7. 배포 서버 링크(진행중)
+### 7. API 엔드포인트
+- Swagger UI: `http://3.34.186.143/swagger/`
+- ReDoc: `http://3.34.186.143/redoc/`
+- 회원가입: `POST http://3.34.186.143/api/accounts/signup/`
+- 로그인: `POST http://3.34.186.143/api/accounts/login/`
 
-## API 엔드포인트
-- 회원가입: `POST /api/accounts/signup/`
-- 로그인: `POST /api/accounts/login/`
-- API 문서: `/swagger/`
 
-## API 문서
-- Swagger UI: `http://localhost:8000/swagger/`
-- ReDoc: `http://localhost:8000/redoc/`
 
 ## 테스트
 ```bash
